@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBT Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>CBT Worksheet</h1>
+
+    <form >
+        <div>
+            <label for="situation">Describe the situation that triggered the negative thought:</label><br>
+            <textarea id="situation" name="situation" rows="4" required></textarea>
+        </div>
+        <div class="question">
+            <label for="thought">Describe the negative thought you had:</label><br>
+            <textarea id="thought" name="thought" rows="4" required></textarea>
+        </div>
+        <div class="question">
+            <label for="emotion">Identify the emotion you felt:</label><br>
+            <select id="emotion" name="emotion" required>
+                <option value="">Select one</option>
+                <option value="sadness">Sadness</option>
+                <option value="anxiety">Anxiety</option>
+                <option value="anger">Anger</option>
+                <option value="guilt">Guilt</option>
+                <option value="shame">Shame</option>
+                <option value="frustration">Frustration</option>
+                <option value="loneliness">Loneliness</option>
+                <option value="hopelessness">Hopelessness</option>
+            </select>
+        </div>
+        <div class="question">
+            <label for="evidence">List the evidence that supports your negative thought:</label><br>
+            <textarea id="evidence" name="evidence" rows="4" required></textarea>
+        </div>
+        
+
+        <div class="question">
+            <label for="distortion">Identify the type of cognitive distortion:</label><br>
+            <select id="distortion" name="distortion" required>
+                <option value="">Select one</option>
+                <option value="all-or-nothing">All-or-Nothing Thinking</option>
+                <option value="overgeneralization">Overgeneralization</option>
+                <option value="catastrophizing">Catastrophizing</option>
+                <option value="personalization">Personalization</option>
+                <option value="emotional-reasoning">Emotional Reasoning</option>
+                <option value="magnification-and-minimization">Magnification and Minimization</option>
+                <option value="should-statements">Should Statements</option>
+                <option value="labeling">Labeling</option>
+            </select>
+        </div>
+
+        <div class="question"> 
+            <label for="challenge">Challenge the negative thought with evidence:</label><br>
+            <textarea id="challenge" name="challenge" rows="4" required></textarea> 
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
+
