@@ -7,8 +7,13 @@ document.querySelector("form").addEventListener("submit", function(event) {
     const thought = document.getElementById("thought").value;
     const emotion = document.getElementById("emotion").value;
     const evidence = document.getElementById("evidence").value;
-    const distortion = document.getElementById("distortion").value;
     const challenge = document.getElementById("challenge").value;
+
+    const distortionCheckboxes = document.querySelectorAll('input[name="distortion"]:checked');
+
+const distortion = Array.from(distortionCheckboxes)
+    .map(cb => cb.value)
+    .join(", ");
 
     let y = 10;
 
@@ -24,7 +29,9 @@ document.querySelector("form").addEventListener("submit", function(event) {
 
         const lines = doc.splitTextToSize(content, 180);
         doc.text(lines, 10, y);
-        y += lines.length * 6 + 4;
+        y += lines.length * 6 + 4;7
+        
+        
     }
 
     addText("Situation:", situation);
