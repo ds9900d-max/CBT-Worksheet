@@ -4,42 +4,114 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CBT</title>
-    <style>
+   <style>
+    :root {
+        --bg-color: #f4f6f9;
+        --card-color: #ffffff;
+        --text-color: #333333;
+        --heading-color: #222222;
+        --link-color: #4a90e2;
+        --border-color: #dddddd;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --bg-color: #121212;
+            --card-color: #1e1e1e;
+            --text-color: #e0e0e0;
+            --heading-color: #ffffff;
+            --link-color: #6aa9ff;
+            --border-color: #444444;
+        }
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        line-height: 1.6;
+
+        background-color: var(--bg-color);
+        color: var(--text-color);
+
+        transition:
+            background-color 0.3s ease,
+            color 0.3s ease;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+        background: var(--card-color);
+        padding: 25px;
+        border-radius: 12px;
+        border: 1px solid var(--border-color);
+    }
+
+    h1 {
+        margin-top: 30px;
+        margin-bottom: 10px;
+        font-size: 24px;
+        color: var(--heading-color);
+    }
+
+    h1:first-child {
+        margin-top: 0;
+    }
+
+    p {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+
+    ul {
+        padding-left: 30px;
+        margin-top: 5px;
+        margin-bottom: 15px;
+    }
+
+    li {
+        margin-bottom: 8px;
+    }
+
+    b {
+        color: var(--heading-color);
+    }
+
+    a {
+        color: var(--link-color);
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            line-height: 1.4;
-            text-align: left;
+            padding: 12px;
+        }
+
+        .container {
+            padding: 18px;
         }
 
         h1 {
-            margin-top: 30px;
-            margin-bottom: 10px;
-            font-size: 24px;
+            font-size: 22px;
         }
 
-        p {
-            margin-top: 10px;
-            margin-bottom: 10px;
-            font-size: 16px;
-        }
-
-        ul {
-            list-style-type: disc;
-            padding-left: 40px;
-            margin-top: 5px;
-            margin-bottom: 10px;
-        }
-
+        p,
         li {
-            margin-bottom: 5px;
+            font-size: 15px;
         }
-
-        b {
-            font-weight: bold;
-        }
-    </style>
+    }
+</style>
 </head>
 <body>
     <h1>What is CBT?</h1>
