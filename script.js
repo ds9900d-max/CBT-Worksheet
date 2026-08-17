@@ -5,7 +5,10 @@ document.querySelector("form").addEventListener("submit", function(event) {
     const doc = new window.jspdf.jsPDF();
     const situation = document.getElementById("situation").value;
     const thought = document.getElementById("thought").value;
-    const emotion = document.getElementById("emotion").value;
+    const emotionCheckboxes = document.querySelectorAll('input[name="emotion"]:checked');
+    const emotion = Array.from(emotionCheckboxes)
+        .map(cb => cb.value)
+        .join(", ");
     const evidence = document.getElementById("evidence").value;
     const challenge = document.getElementById("challenge").value;
     const distortionCheckboxes =
